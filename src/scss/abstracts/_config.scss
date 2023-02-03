@@ -1,0 +1,23 @@
+/// setting up variables, maps and other stuff
+
+$header-height: '';
+$grid-container-width: 1180px;
+$grid-columns: 12;
+$grid-column-gap: 20px;
+$grid-row-gap: 0;
+$grid-column-width: ''; // if constant
+
+$breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1440px,
+);
+
+// shadows
+$shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
+$shadow--card: 0px 0px 20px rgba(0, 0, 0, 0.1);
+// $shadow--hover: 0px 10px 15px rgba(0, 0, 0, 0.15);
+// $shadow--card:  0px 10px 20px rgba(0, 0, 0, 0.15);
