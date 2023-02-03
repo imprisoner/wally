@@ -1,0 +1,29 @@
+.button {
+  @include rounded;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // 
+  height: 47px;
+  padding: 0 50px;
+  // 
+  background: $orange;
+  color: $white;
+  //
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  @media (hover: hover) {
+    :hover {
+      box-shadow: $shadow;
+    }
+  }
+
+  &:active {
+    box-shadow: $shadow;
+  }
+}

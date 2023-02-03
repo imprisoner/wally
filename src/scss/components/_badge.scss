@@ -1,0 +1,12 @@
+.badge {
+  // 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // 
+  height: 47px;
+  padding: 0 19px;
+  // 
+  background-color: $sea-blue;
+  box-shadow: $shadow;
+}

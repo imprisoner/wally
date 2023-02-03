@@ -1,0 +1,14 @@
+- function parsePhone(phone="") {
+    return phone.split("").map(symbol => /\d/.test(symbol))
+  } 
+
+mixin person(person={})
+  div.person
+    div.person__avatar
+      img(src= person.image)
+    div.person__content
+      p.person__name= person.name
+      hr.person__divider
+      div.person__contacts
+        p.person__contact Моб: #[a(href="tel:#{parsePhone(person.phone)}")= person.phone]
+        p.person__contact E-Mail: #[a(href="mailto:#{person.email}").person__email= person.email]

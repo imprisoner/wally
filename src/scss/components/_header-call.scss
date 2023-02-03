@@ -1,0 +1,17 @@
+.header-call {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: $blue;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+  }
+}

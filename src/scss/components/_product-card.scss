@@ -1,0 +1,45 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //
+  width: 280px;
+  padding-top: 24px;
+  padding-bottom: 35px;
+  //
+  box-shadow: $shadow--card;
+
+  &__aside {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 17px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 28px;
+    color: $blue;
+    margin-bottom: 17px;
+  }
+
+  &__quantity {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: $blue;
+    margin-bottom: 9px;
+  }
+
+  &__price {
+    margin-bottom: 14px;
+  }
+
+
+}

@@ -1,0 +1,13 @@
+.form {
+  width: 300px;
+
+  &, &__fieldset {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+  }
+
+  &__submit {
+    margin: 0 auto;
+  }
+}

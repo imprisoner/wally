@@ -1,0 +1,27 @@
+header.header
+  div.header__container.container
+    div.header__logo
+      img(src="/assets/images/logo.png")
+    nav.header__menu
+      ul.header__list
+        li.header__item
+          a(href="#").header__link Каталог
+        li.header__item
+          a(href="#").header__link Калькулятор
+        li.header__item
+          a(href="#").header__link Акции
+        li.header__item
+          a(href="#").header__link Контакты
+    div.header__contacts
+      a(href="tel:88002504660").header__call.header-call
+        div.header-call__icon
+          include ../../assets/svg/phone.svg
+        span.header-call__text 8 (800) 250-46-60
+      a(href="t.me/").header__telegram.link-button
+        div.link-button__icon
+          include ../../assets/svg/telegram.svg
+        span.link-button__text Telegram
+      a(href="wa.me/").header__whatsapp.link-button
+        div.link-button__icon
+          include ../../assets/svg/whatsapp.svg
+        span.link-button__text WhatsApp

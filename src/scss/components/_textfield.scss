@@ -1,0 +1,21 @@
+.textfield {
+  @include rounded;
+  //
+  height: 47px;
+  padding: 0 25px;
+  //
+  background: $sea-blue;
+  color: $blue;
+  //
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  // 
+  border: none;
+  outline: none;
+  &--small {
+    height: 36px;
+    background: $sea-blue--light;
+  }
+}

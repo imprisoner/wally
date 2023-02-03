@@ -1,0 +1,35 @@
+$header-height: 138px;
+
+.header {
+  // font-family: Montserrat;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    gap: 72px;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    //
+    color: $blue;
+    // 
+    text-transform: uppercase;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px
+  }
+}

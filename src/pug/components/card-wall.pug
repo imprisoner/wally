@@ -1,0 +1,5 @@
+mixin card-wall(cards)
+  div.cw-2__wall.row&attributes(attributes)
+    each item in novice
+      div.col-xl-3
+        +product-card(item)
