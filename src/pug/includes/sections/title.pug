@@ -1,12 +1,22 @@
 include ../../components/price-badge.pug
+include ../../components/link-button.pug
 
 section.title
   div.title__container.container
-    div.title__offer
-      span Минимальный заказ
-      +price-badge(5000)
-    h1.title__heading Получите предложение с актуальными ценами
-    div.title__contacts.title-contacts
-      p.title__get-price Получить лучшие оптовые цены
+    div.title__wrapper.row
+      div.title__offer.col-xl-6
+        span Минимальный заказ
+        +price-badge(5000)
+      div.col-xl-7
+        h1.title__heading Получите предложение с актуальными ценами
+    div.row
+      div.title__contacts.col-xl-4
+        p.title__get-price Получить лучшие оптовые цены
+        div.title__links
+          +link-button(telegram).title__telegram
+            include ../../../assets/svg/telegram.svg
+          +link-button(whatsapp).title__whatsapp
+            include ../../../assets/svg/whatsapp.svg
+        include ../form.pug
 
 

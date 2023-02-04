@@ -1,0 +1,34 @@
+.title {
+  background: url(/assets/images/blue_bg.png);
+
+  &__offer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: $white;
+  }
+
+  &__heading {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 62px;
+    color: $white;
+  }
+
+  &__wrapper {
+    margin-bottom: 14px;
+  }
+  
+  &__get-price {
+    margin-bottom: 44px;
+    color: $white;
+  }
+
+  &__links {
+    display: none;
+  }
+
+  &__telegram, &__whatsapp {
+    color: $white;
+  }
+}

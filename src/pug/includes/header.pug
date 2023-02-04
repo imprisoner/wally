@@ -1,3 +1,4 @@
+include ../components/link-button.pug
 header.header
   div.header__container.container
     div.header__logo.logo
@@ -19,11 +20,24 @@ header.header
         div.header-call__icon
           include ../../assets/svg/phone.svg
         span.header-call__text 8 (800) 250-46-60
-      a(href="t.me/").header__telegram.link-button
+      -
+        const telegram = {
+          href: "t.me/",
+          text: "Telegram",
+        }
+        const whatsapp = {
+          href: "t.me/",
+          text: "Telegram",
+        }
+      +link-button(telegram)
+        include ../../assets/svg/telegram.svg
+      +link-button(whatsapp)
+        include ../../assets/svg/whatsapp.svg
+      //- a(href="t.me/").header__telegram.link-button
         div.link-button__icon
           include ../../assets/svg/telegram.svg
         span.link-button__text Telegram
-      a(href="wa.me/").header__whatsapp.link-button
+      //- a(href="wa.me/").header__whatsapp.link-button
         div.link-button__icon
           include ../../assets/svg/whatsapp.svg
         span.link-button__text WhatsApp

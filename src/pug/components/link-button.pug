@@ -1,0 +1,5 @@
+mixin link-button(social)
+  a(href= social.href).link-button&attributes(attributes)
+    div.link-button__icon
+      block
+    span.link-button__text= social.text
