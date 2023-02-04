@@ -1,6 +1,11 @@
 .container {
   width: $grid-container-width;
   margin: 0 auto;
+
+  @include max-width(xl) {
+    width: calc(100% - 30px * 2);
+    margin: 0 30px;
+  }
 }
 
 .row {

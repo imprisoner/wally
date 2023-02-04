@@ -1,8 +1,10 @@
 header.header
   div.header__container.container
-    div.header__logo
-      img(src="/assets/images/logo.png")
+    div.header__logo.logo
+      img(src="/assets/images/logo.png").logo__image
     nav.header__menu
+      button(type="button").header__burger
+        include ../../assets/svg/burger.svg
       ul.header__list
         li.header__item
           a(href="#").header__link Каталог

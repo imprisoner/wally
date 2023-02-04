@@ -1,17 +1,33 @@
 .header-call {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   color: $blue;
 
+  @include max-width(xl) {
+    width: 42px;
+    height: 42px;
+    border: 2px solid $blue;
+    border-radius: 9999px;
+  }
+  @include max-width(md) {
+    height: 32px;
+    width: 32px;
+  }
   &__icon {
     width: 16px;
     height: 16px;
+
   }
 
   &__text {
     font-weight: 700;
     font-size: 20px;
     line-height: 31px;
+
+    @include max-width(xl) {
+      display: none;
+    }
   }
 }

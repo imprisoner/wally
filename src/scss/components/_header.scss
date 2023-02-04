@@ -5,15 +5,44 @@ $header-height: 138px;
   height: $header-height;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @include max-width(md) {
+    height: 71px;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  &__menu {
+    @include max-width(md) {
+      order: 1;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include max-width(md) {
+      display: flex;
+    }
+  }
+
   &__list {
     display: flex;
     gap: 72px;
+
+    @include max-width(xl) {
+      gap: 30px;
+    }
+
+    @include max-width(md) {
+      // TODO mobile-menu
+      display: none;
+    }
   }
 
   &__item {
@@ -22,7 +51,7 @@ $header-height: 138px;
     line-height: 20px;
     //
     color: $blue;
-    // 
+    //
     text-transform: uppercase;
   }
 
@@ -30,6 +59,18 @@ $header-height: 138px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px
+    gap: 10px;
+
+    @include max-width(md) {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  }
+
+  &__whatsapp,
+  &__telegram {
+    @include max-width(xl) {
+      display: none;
+    }
   }
 }
