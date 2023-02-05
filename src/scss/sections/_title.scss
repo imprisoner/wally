@@ -16,7 +16,7 @@
       display: flex;
       flex-direction: column;
       gap: 26px;
-      align-items: start;
+      align-items: flex-start;
     }
 
     @include max-width(md) {
@@ -38,9 +38,6 @@
   }
 
   &__heading {
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 62px;
     color: $white;
 
     @include max-width(xl) {

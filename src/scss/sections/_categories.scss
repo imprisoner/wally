@@ -1,0 +1,32 @@
+.categories {
+  padding: 85px 0 70px;
+
+  @include max-width(md) {
+    padding: 40px 0 50px;
+  }
+
+  &__top {
+    margin-bottom: 67px;
+
+    @include max-width(md) {
+      place-items: center;
+      margin-bottom: unset;
+    }
+  }
+
+  &__heading {
+    width: 100%;
+    
+    @include max-width(md) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include max-width(md) {
+        display: initial;
+      }
+    }
+  }
+}

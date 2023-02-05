@@ -1,5 +1,6 @@
+include product-card.pug
 mixin card-wall(cards)
-  div.cw-2__wall.row&attributes(attributes)
-    each item in novice
-      div.col-xl-3
+  div.card-wall.row&attributes(attributes)
+    each item in cards
+      div.col-xl-3.col-md-4.col-6
         +product-card(item)

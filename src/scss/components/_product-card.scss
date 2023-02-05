@@ -8,11 +8,25 @@
   padding-bottom: 35px;
   //
   box-shadow: $shadow--card;
+  //
+  text-align: center;
 
-  &__aside {
+  @include max-width(xl) {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    //
+    width: 170px;
+  }
+
+  &__figure {
     width: 210px;
     height: 210px;
     margin-bottom: 17px;
+
+    @include max-width(xl) {
+      width: 130px;
+      height: 130px;
+    }
   }
 
   &__image {
@@ -23,23 +37,44 @@
 
   &__title {
     font-weight: 700;
-    font-size: 21px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
     color: $blue;
     margin-bottom: 17px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+
+    @include max-width(xl) {
+      font-size: 16px;
+      margin-bottom: unset;
+    }
   }
 
   &__quantity {
     font-weight: 400;
     font-size: 24px;
-    line-height: 40px;
+    line-height: 29px;
     color: $blue;
-    margin-bottom: 9px;
+    margin-bottom: 14px;
+
+    @include max-width(xl) {
+      font-size: 20px;
+      margin-bottom: unset;
+    }
   }
 
   &__price {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
+
+    @include max-width(xl) {
+      line-height: 100%;
+      // margin-bottom: 4px;
+    }
   }
 
-
+  &__button {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
 }

@@ -1,0 +1,44 @@
+.calc-group {
+  color: $white;
+  display: flex;
+
+  @include max-width(xl) {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    &--min {
+      width: min-content;
+
+      @include max-width(xl) {
+        width: auto;
+      }
+    }
+  }
+
+  &__textfield {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+
+    @include max-width(xl) {
+      margin-left: unset;
+    }
+  }
+
+  &__input {
+    width: 159px;
+  }
+
+  &__unit {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

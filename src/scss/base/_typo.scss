@@ -1,0 +1,10 @@
+.s-heading {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+
+  @include max-width(xl) {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}

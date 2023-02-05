@@ -1,0 +1,12 @@
+.card-wall {
+  gap: 20px;
+
+  @include max-width(xl) {
+    column-gap: 0;
+    place-items: center;
+  }
+
+  @include max-width(md) {
+    row-gap: 15px;
+  }
+}

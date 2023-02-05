@@ -1,0 +1,31 @@
+.calc {
+  padding: 70px 0;
+  background: url(/assets/images/blue_bg.png) center / cover no-repeat;
+  
+  @include max-width(md) {
+    padding: 45px 0 50px;
+  }
+
+  &__top {
+    margin-bottom: 50px;
+  }
+  
+  &__heading {
+    color: $white;
+  }
+
+  &__fieldset {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 30px 75px;
+    margin-bottom: 40px;
+
+    @include max-width(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__submit {
+    justify-self: center;
+  }
+}
