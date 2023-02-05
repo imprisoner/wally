@@ -1,10 +1,24 @@
 .products {
+  padding: 90px 0;
+
+  @include max-width(md) {
+    padding: 45px 0 50px;
+  }
+
   &__popular {
     margin-bottom: 73px;
+
+    @include max-width(md) {
+      margin-bottom: 35px;
+    }
    }
 
   &__heading {
     margin-bottom: 30px;
     text-align: center;
+
+    @include max-width(md) {
+      margin-bottom: 10px;
+    }
   }
 }
