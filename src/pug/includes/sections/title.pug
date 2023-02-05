@@ -1,22 +1,26 @@
 include ../../components/price-badge.pug
 include ../../components/link-button.pug
+include ../../components/product-offer.pug
 
 section.title
   div.title__container.container
-    div.title__wrapper.row
-      div.title__offer.col-xl-6
-        span Минимальный заказ
-        +price-badge(5000)
-      div.col-xl-7
-        h1.title__heading Получите предложение с актуальными ценами
     div.row
-      div.title__contacts.col-xl-4
-        p.title__get-price Получить лучшие оптовые цены
-        div.title__links
-          +link-button(telegram).title__telegram
-            include ../../../assets/svg/telegram.svg
-          +link-button(whatsapp).title__whatsapp
-            include ../../../assets/svg/whatsapp.svg
-        include ../form.pug
-
-
+      div.title__content.col-md-6.col-12
+        div.title__offer
+          span Минимальный заказ
+          +price-badge(5000)
+        div.title__heading-wrapper
+          h1.title__heading Получите предложение#[br]с актуальными ценами
+        div.title__contacts
+          p.title__get-price Получить лучшие оптовые цены
+          div.title__links
+            +link-button(telegram).title__telegram
+              include ../../../assets/svg/telegram.svg
+            +link-button(whatsapp).title__whatsapp
+              include ../../../assets/svg/whatsapp.svg
+          include ../form.pug
+      div.title__products.offers-grid.col-md-6    
+        include ../data/_product-offers.pug
+        - const modifiers = ['left', 'up', 'right', 'bottom']
+        each product, index in productOffers
+          +product-offer(product)(class=`offers-grid__item offers-grid__item--${modifiers[index]}`)

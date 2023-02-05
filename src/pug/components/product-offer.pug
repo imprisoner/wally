@@ -1,0 +1,6 @@
+mixin product-offer(product)
+  a(href= product.link).product-offer&attributes(attributes)
+    div.product-offer__figure
+      img(src= product.image).product-offer__image
+    span.product-offer__price.badge
+      span.price от #{product.price}₽

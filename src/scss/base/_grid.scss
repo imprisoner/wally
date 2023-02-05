@@ -6,6 +6,11 @@
     width: calc(100% - 30px * 2);
     margin: 0 30px;
   }
+
+  @include max-width(md) {
+    width: calc(100% - 12px * 2);
+    margin: 0 12px;
+  }
 }
 
 .row {

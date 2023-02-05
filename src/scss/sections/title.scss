@@ -1,11 +1,40 @@
 .title {
-  background: url(/assets/images/blue_bg.png);
+  padding: 60px 0 70px;
+  position: relative;
+  background: url(/assets/images/blue_bg.png) center / cover no-repeat;
 
+  @include max-width(md) {
+    padding: 35px 0 45px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    @include max-width(xl) {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      align-items: start;
+    }
+
+    @include max-width(md) {
+      align-items: center;
+    }
+  }
+  
   &__offer {
     display: flex;
     align-items: center;
     gap: 14px;
     color: $white;
+    text-transform: uppercase;
+
+    @include max-width(xl) {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
 
   &__heading {
@@ -13,12 +42,17 @@
     font-size: 48px;
     line-height: 62px;
     color: $white;
+
+    @include max-width(xl) {
+      font-size: 40px;
+      line-height: 50px;
+    }
   }
 
-  &__wrapper {
+  &__heading-wrapper {
     margin-bottom: 14px;
   }
-  
+
   &__get-price {
     margin-bottom: 44px;
     color: $white;
@@ -26,9 +60,26 @@
 
   &__links {
     display: none;
+    @include max-width(md) {
+      display: flex;
+      margin-bottom: 30px;
+    }
   }
 
-  &__telegram, &__whatsapp {
+  &__telegram,
+  &__whatsapp {
     color: $white;
+    border-color: $white;
+  }
+
+  &__products {
+    position: absolute;
+    right: 80px;
+    top: 30px;
+
+    @include max-width(xl) {
+      position: static;
+      gap: 30px;
+    }
   }
 }
