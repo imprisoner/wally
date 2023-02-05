@@ -1,0 +1,35 @@
+.contacts {
+  padding: 145px 0 100px;
+  @include max-width(md) {
+    padding: 40px 0 65px;
+  }
+  &__heading {
+    margin-bottom: 25px;
+
+    @include max-width(xl) {
+      font-size: 32px;
+      line-height: 45px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  &__left {
+    @include max-width(md) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__right {
+  }
+
+  &__persons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

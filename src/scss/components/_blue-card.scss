@@ -1,0 +1,27 @@
+.blue-card {
+  @include rounded;
+
+  display: grid;
+  place-items: center;
+  grid-template-columns: 132px auto;
+  height: 150px;
+  padding-right: 10px;
+  // 
+  background: $sea-blue--light;
+  color: $blue;
+
+  &__num {
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 146px;
+    text-transform: uppercase;
+  }
+  
+  &__text {
+    justify-self: start;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+}

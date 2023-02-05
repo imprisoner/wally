@@ -1,10 +1,20 @@
 .person {
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @include max-width(xl) {
+    gap: 20px;
+  }
 
   &__avatar {
     width: 150px;
     height: 150px;
+    flex-shrink: 0;
+    @include max-width(xl) {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__image {
@@ -14,27 +24,43 @@
   }
 
   &__content {
-
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
   }
 
   &__name {
+    font-size: 20px;
+    line-height: 24px;
+    color: $blue;
 
+    @include max-width(xl) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__divider {
     background: $light-blue;
     width: 50px;
+    height: 2px;
   }
 
   &__contacts {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: $blue;
 
+    @include max-width(xl) {
+      font-size: 12px;
+    }
   }
 
   &__phone {
-
   }
 
   &__email {
-
+    color: $light-blue;
   }
 }

@@ -1,0 +1,19 @@
+include ../../components/person.pug
+include ../data/_persons.pug
+
+section.contacts
+  div.container
+    div.row
+      div.contacts__left.col-md-6.col-12
+        h2.contacts__heading.s-heading.dual-text Напишите нам#[br]#[span.dual-text__dark и получите самые актуальные цены]
+        div.contacts__socials
+          +link-button(telegram).contacts__telegram
+            include ../../../assets/svg/telegram.svg
+          +link-button(whatsapp).contacts__whatsapp
+            include ../../../assets/svg/whatsapp.svg
+        include ../form.pug
+      div.contacts__right.col-md-6.col-12
+        h2.contacts__heading.s-heading.dual-text Или свяжитесь#[br]#[span.dual-text__dark с нами сами]
+        div.contacts__persons
+          each person in persons
+            +person(person)
