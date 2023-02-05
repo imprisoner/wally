@@ -1,0 +1,15 @@
+include ../../components/card-wall.pug
+include ../data/_popular-cards.pug
+include ../data/_latest-cards.pug
+
+section.products
+  div.products__popular.container
+    div.row
+      div.col-12
+        h2.products__heading.s-heading.dual-text Хиты #[span.dual-text__dark продаж]
+    +card-wall(popularCards)
+  div.products__latest.container
+    div.row
+      div.col-12  
+        h2.products__heading.s-heading.dual-text Хиты #[span.dual-text__dark продаж]
+    +card-wall(latestCards)
