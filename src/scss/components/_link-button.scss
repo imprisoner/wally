@@ -16,4 +16,10 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.05em;
+
+  &--small {
+    height: 22px;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
 }

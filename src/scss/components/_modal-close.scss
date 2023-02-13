@@ -1,0 +1,13 @@
+.modal-close {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  color: $blue;
+  cursor: pointer;
+  @include max-width(md) {
+    top: 30px;
+    right: 30px;
+  }
+}

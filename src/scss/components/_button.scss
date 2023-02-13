@@ -8,7 +8,7 @@
   height: 47px;
   padding: 0 50px;
   // 
-  background: $orange;
+  background: $button;
   color: $white;
   //
   font-size: 14px;
@@ -18,8 +18,9 @@
   text-transform: uppercase;
 
   @media (hover: hover) {
-    :hover {
+    &:hover {
       box-shadow: $shadow;
+      background: $button--hovered;
     }
   }
 

@@ -1,0 +1,8 @@
+mixin card(data={})
+  div.card
+    figure.card__figure
+     img(src= data.image).card__image
+    h3.card__title= data.title
+    p.card__quantity.quantity от #{data.quantity}шт
+    p.card__price.price от #{data.price}₽
+    button(type="button").card__button.button Купить

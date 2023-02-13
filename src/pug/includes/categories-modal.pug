@@ -1,0 +1,23 @@
+include ../components/modal.pug
+include ../components/modal-close.pug
++modal()#m1
+  div.categories-modal
+    +modal-close().categories-modal__close
+    aside.categories-modal__picture
+      img(src="/assets/images/category-clock.png").categories-modal__image
+    main.categories-modal__content
+      h3.categories-modal__heading Смарт-часы
+      p.categories-modal__hint Цены, цвета и характеристики#[br]уточняйте у менеджера
+      ul.categories-modal__list
+        each _ in Array(14)
+          li.categories-modal__item
+            a(href="#").categories-modal__link.link-button.link-button--small Модель
+      div.categories-modal__details
+        div
+          p.categories-modal__quantity.quantity от 1000шт
+          p.categories-modal__price.price от 32000₽
+        div
+          p.categories-modal__quantity.quantity от 10000шт
+          p.categories-modal__price.price от 320000₽
+      button(type="button").categories-modal__button.button Заказать
+        

@@ -1,0 +1,12 @@
+include ../components/modal.pug
+include ../components/modal-close.pug
++modal()#m2
+  div.contacts-modal
+    +modal-close().contacts-modal__close
+    h2.contacts-modal__heading.dual-text Напишите нам#[br]#[span.dual-text__dark и получите самые актуальные цены]
+    div.contacts-modal__socials
+      +link-button(telegram).contacts-modal__telegram
+        include ../../assets/svg/telegram.svg
+      +link-button(whatsapp).contacts-modal__whatsapp
+        include ../../assets/svg/whatsapp.svg
+    include form.pug

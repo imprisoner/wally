@@ -1,6 +1,6 @@
-include product-card.pug
+include card.pug
 mixin card-wall(cards)
   div.card-wall.row&attributes(attributes)
     each item in cards
       div.col-xl-3.col-md-4.col-6
-        +product-card(item)
+        +card(item)
