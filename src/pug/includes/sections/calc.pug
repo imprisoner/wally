@@ -3,22 +3,22 @@ section.calc
     div.calc__top.row
       div.col-9
         h2.calc__heading.s-heading Посчитайте прибыль
-    form(action="" method="POST").calc__form.row
+    form(action="" method="POST" id="calc").calc__form.row
       fieldset.calc__fieldset.col-xl-11.col-12
         div.calc__group.calc-group
-          label(for="volume").calc-group__label Объём закупки
+          label(for="cost").calc-group__label Объём закупки
           div.calc-group__textfield
-            input(type="text" id="volume").calc-group__input.textfield.textfield--small
+            input(type="text" id="cost").calc-group__input.textfield.textfield--small
             span.calc-group__unit ₽
         div.calc__group.calc-group
-          label(for="discount").calc-group__label.calc-group__label--min Скидка составит
+          label(for="quantity").calc-group__label.calc-group__label--min Скидка составит
           div.calc-group__textfield
-            input(type="text" id="discount" readonly).calc-group__input.textfield.textfield--small
+            input(type="text" id="quantity").calc-group__input.textfield.textfield--small
             span.calc-group__unit ₽
         div.calc__group.calc-group
-          label(for="markup").calc-group__label Наценка (в среднем 200%)
+          label(for="retail").calc-group__label Наценка (в среднем 200%)
           div.calc-group__textfield
-            input(type="text" id="markup").calc-group__input.textfield.textfield--small
+            input(type="text" id="retail").calc-group__input.textfield.textfield--small
             span.calc-group__unit %
         div.calc__group.calc-group
           label(for="profit").calc-group__label.calc-group__label--min Прибыль составит

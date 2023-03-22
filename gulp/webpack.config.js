@@ -15,23 +15,23 @@ const pageScripts = fs
   .map(item => [item.name.replace(".js", ""), { import: "@/" + item.name }])
 
 export default {
-  // mode: "development",
-  mode: "production",
+  mode: "development",
+  // mode: "production",
   resolve: {
     extensions: [".js", ".mjs"],
     alias: {
       "@": JS_DIR
     }
   },
-  // devtool: "inline-source-map",
+  devtool: "inline-source-map",
   entry: {
     ...Object.fromEntries(pageScripts),
   },
   output: {
     filename: "[name].js",
   },
-  // watch: true,
-  // optimization: {
-  //   minimize: false
-  // }
+  watch: true,
+  optimization: {
+    minimize: false
+  }
 }
