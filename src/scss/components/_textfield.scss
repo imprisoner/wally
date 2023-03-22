@@ -11,11 +11,17 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 40px;
-  // 
+  //
   border: none;
   outline: none;
   &--small {
     height: 36px;
     background: $sea-blue--light;
+  }
+
+  &--invalid {
+    outline: 2px solid #fec163;
+    animation: outline-pulse 0.8s ease-out;
+    animation-iteration-count: 2;
   }
 }

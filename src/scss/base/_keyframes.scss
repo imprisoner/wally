@@ -1,0 +1,27 @@
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes outline-pulse {
+  // 0% {
+  //   outline-color: 3px solid #fec163;
+  // }
+
+  50% {
+    outline: 2px solid #fec0637c;
+  }
+
+  // 100% {
+  //   outline-color: 3px solid #fec163;
+  // }
+}

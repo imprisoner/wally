@@ -4,27 +4,31 @@ section.calc
       div.col-9
         h2.calc__heading.s-heading Посчитайте прибыль
     form(action="" method="POST" id="calc").calc__form.row
-      fieldset.calc__fieldset.col-xl-11.col-12
+      fieldset.calc__fieldset.col-12
         div.calc__group.calc-group
-          label(for="cost").calc-group__label Объём закупки
+          label(for="cost").calc-group__label Себестоимость (1 шт.)
           div.calc-group__textfield
-            input(type="text" id="cost").calc-group__input.textfield.textfield--small
+            input(type="text" id="cost" maxlength="9").calc-group__input.textfield.textfield--small
             span.calc-group__unit ₽
+          p.calc-group__error Это обязательное поле
         div.calc__group.calc-group
-          label(for="quantity").calc-group__label.calc-group__label--min Скидка составит
+          label(for="amount").calc-group__label.calc-group__label--min Количество (шт.)
           div.calc-group__textfield
-            input(type="text" id="quantity").calc-group__input.textfield.textfield--small
+            input(type="text" id="amount" maxlength="9").calc-group__input.textfield.textfield--small
             span.calc-group__unit ₽
+          p.calc-group__error Это обязательное поле
         div.calc__group.calc-group
-          label(for="retail").calc-group__label Наценка (в среднем 200%)
+          label(for="retail").calc-group__label Розничная цена
           div.calc-group__textfield
-            input(type="text" id="retail").calc-group__input.textfield.textfield--small
-            span.calc-group__unit %
+            input(type="text" id="retail" maxlength="9").calc-group__input.textfield.textfield--small
+            span.calc-group__unit ₽
+          p.calc-group__error Это обязательное поле
         div.calc__group.calc-group
           label(for="profit").calc-group__label.calc-group__label--min Прибыль составит
           div.calc-group__textfield
             input(type="text" id="profit" readonly).calc-group__input.textfield.textfield--small
             span.calc-group__unit ₽
+          p.calc-group__error Это обязательное поле
       div.calc__submit.col-12
         button(type="submit").button Сделать расчёт
           
