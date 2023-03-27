@@ -18,5 +18,6 @@
 
   &--active {
     display: grid;
+    animation: fadeIn .6s forwards;
   }
 }

@@ -1,0 +1,32 @@
+.request-modal {
+  @extend .contacts-modal;
+  
+  width: 1000px;
+
+  @include max-width(md) {
+    width: auto;
+    padding: unset;
+  }
+
+  &__heading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: $blue;
+  }
+
+  &__form {
+    width: 400px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    color: $blue;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+  }
+}

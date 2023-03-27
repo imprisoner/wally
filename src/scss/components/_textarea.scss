@@ -1,0 +1,5 @@
+.textarea {
+  @extend .textfield;
+  height: 191px;
+  resize: none;
+}

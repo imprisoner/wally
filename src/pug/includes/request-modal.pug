@@ -1,0 +1,20 @@
+include ../components/modal.pug
+include ../components/modal-close.pug
++modal()#m2
+  div.request-modal
+    +modal-close().request-modal__close
+    h2.request-modal__heading.dual-text Оставьте заявку и мы с вами свяжемся!
+    form(action="" method="POST").form.request-modal__form
+      fieldeset.form__fieldset
+        input(type="text" placeholder="Имя").form__textfield.textfield
+        input(type="text" placeholder="Почта").form__textfield.textfield
+        input(type="text" placeholder="Телефон").form__textfield.textfield
+        textarea(placeholder="Комментарий").form__textarea.textarea
+      div.form__actions
+        button(type="submit").form__submit.button Отправить
+    p.request-modal__text Или свяжитесь с нами напрямую
+    div.request-modal__socials
+      +link-button(telegram).request-modal__telegram
+        include ../../assets/svg/telegram.svg
+      +link-button(whatsapp).request-modal__whatsapp
+        include ../../assets/svg/whatsapp.svg
