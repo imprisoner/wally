@@ -7,8 +7,8 @@ include ../components/modal-close.pug
     form(action="" method="POST").form.request-modal__form
       fieldeset.form__fieldset
         input(type="text" placeholder="Имя").form__textfield.textfield
-        input(type="text" placeholder="Почта").form__textfield.textfield
-        input(type="text" placeholder="Телефон").form__textfield.textfield
+        input(type="text" placeholder="Почта" data-id="email").form__textfield.textfield
+        input(type="text" placeholder="Телефон" data-id="phone").form__textfield.textfield
         textarea(placeholder="Комментарий").form__textarea.textarea
       div.form__actions
         button(type="submit").form__submit.button Отправить

@@ -1,5 +1,6 @@
 import initModal from "./components/modal.js";
 import initCalc from "./components/calc.js";
+import initMask from "./components/mask.js"
 
 const modalSelectors = [
   {
@@ -14,12 +15,10 @@ const modalSelectors = [
   },
 ];
 
-modalSelectors.forEach((selectors) => {
-  initModal(selectors);
-});
-
-// turn off categories-modal 
-
-
-
-initCalc();
+document.addEventListener('DOMContentLoaded', () => {
+  modalSelectors.forEach((selectors) => {
+    initModal(selectors);
+  });
+  initCalc();
+  initMask()
+})

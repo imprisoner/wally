@@ -1,7 +1,7 @@
 form(action="" method="POST").form
   fieldeset.form__fieldset
     input(type="text" placeholder="Имя").form__textfield.textfield
-    input(type="text" placeholder="Почта").form__textfield.textfield
-    input(type="text" placeholder="Телефон").form__textfield.textfield
+    input(type="text" placeholder="Почта" data-id="email").form__textfield.textfield
+    input(type="text" placeholder="Телефон" data-id="phone").form__textfield.textfield
   div.form__actions
     button(type="submit" data-trigger="#m2").form__submit.button Отправить
