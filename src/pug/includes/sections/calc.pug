@@ -1,4 +1,4 @@
-section.calc
+section#calc.calc
   div.container
     div.calc__top.row
       div.col-9
@@ -12,10 +12,10 @@ section.calc
             span.calc-group__unit ₽
           p.calc-group__error Это обязательное поле
         div.calc__group.calc-group
-          label(for="amount").calc-group__label.calc-group__label--min Количество (шт.)
+          label(for="amount").calc-group__label.calc-group__label--min Количество
           div.calc-group__textfield
             input(type="text" id="amount" maxlength="9").calc-group__input.textfield.textfield--small
-            span.calc-group__unit ₽
+            span.calc-group__unit ШТ
           p.calc-group__error Это обязательное поле
         div.calc__group.calc-group
           label(for="retail").calc-group__label Розничная цена

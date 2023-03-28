@@ -3,55 +3,17 @@ const classNames = {
   activeModal: "modal--active",
 };
 
-// export default function modal(
-//   selectors = {
-//     modal: "",
-//     trigger: "",
-//     close: "",
-//   }
-// ) {
-//   const overlay = document.querySelector(selectors.modal);
-//   const trigger = document.querySelector(selectors.trigger);
-//   const close = overlay.querySelector(selectors.close);
-
-//   console.log(overlay);
-//   trigger.addEventListener("click", (event) => {
-//     document.body.classList.add(classNames.bodyNoScroll);
-//     overlay.classList.add(classNames.activeModal);
-//   });
-
-//   overlay.addEventListener("click", (event) => {
-//     if (event.target !== overlay) return;
-
-//     overlay.classList.remove(classNames.activeModal);
-//     document.body.classList.remove(classNames.bodyNoScroll);
-//   });
-
-//   close.addEventListener("click", (event) => {
-//     overlay.classList.remove(classNames.activeModal);
-//     document.body.classList.remove(classNames.bodyNoScroll);
-//   });
-// }
-
+let triggersList = [];
 
 export default function modal(
   selectors = {
     modal: "",
-    trigger: "",
     close: "",
+    trigger: "",
   }
 ) {
   const overlay = document.querySelector(selectors.modal);
-  const trigger = document.querySelector(selectors.trigger);
   const close = overlay.querySelector(selectors.close);
-
-  trigger.addEventListener("click", (event) => {
-    const scrollBarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-    document.body.style.paddingRight = `${scrollBarWidth}px`;
-    document.body.classList.add(classNames.bodyNoScroll);
-    overlay.classList.add(classNames.activeModal);
-  });
 
   overlay.addEventListener("click", (event) => {
     if (event.target !== overlay) return;
@@ -64,5 +26,35 @@ export default function modal(
     document.body.style.paddingRight = "";
     overlay.classList.remove(classNames.activeModal);
     document.body.classList.remove(classNames.bodyNoScroll);
+  });
+
+  if (!triggersList.length) {
+    triggersList = Array.from(document.querySelectorAll(selectors.trigger));
+  }
+
+  const filteredList = triggersList.filter((item) => {
+    return item.dataset.trigger === selectors.modal;
+  });
+
+  
+
+  filteredList.forEach((el) => {
+    el.addEventListener("click", (event) => {
+
+      // check if second popup called from another popup and turn it off
+      const isCallFromModal = document.body.classList.contains(classNames.bodyNoScroll)
+      if(isCallFromModal) {
+        document.body.style.paddingRight = "";
+        document.body.classList.remove(classNames.bodyNoScroll);
+        el.closest(`.${classNames.activeModal}`).classList.remove(classNames.activeModal)
+      }
+
+      const scrollBarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
+      document.body.classList.add(classNames.bodyNoScroll);
+      overlay.classList.add(classNames.activeModal);
+    });
   });
 }

@@ -1,14 +1,25 @@
 import initModal from "./components/modal.js";
 import initCalc from "./components/calc.js";
 
-const contactsModalSelectors = {
-  modal: "#m2",
-  trigger: "#m2-trigger",
-  close: ".modal-close",
-};
+const modalSelectors = [
+  {
+    modal: "#m1",
+    close: ".modal-close",
+    trigger: "[data-trigger]"
+  },
+  {
+    modal: "#m2",
+    close: ".modal-close",
+    trigger: "[data-trigger]"
+  },
+];
 
-initModal(contactsModalSelectors);
+modalSelectors.forEach((selectors) => {
+  initModal(selectors);
+});
+
+// turn off categories-modal 
+
 
 
 initCalc();
-

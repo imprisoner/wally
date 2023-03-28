@@ -9,7 +9,7 @@
   overflow: auto;
   display: none;
   place-items: center;
-  
+  animation: fadeIn 1s alternate-reverse;
   &__dialog {
     @include max-width(md) {
       width: 100%;
@@ -18,6 +18,6 @@
 
   &--active {
     display: grid;
-    animation: fadeIn .6s forwards;
+    animation: fadeIn 1s forwards;
   }
 }
